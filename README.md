@@ -1,2 +1,4 @@
 # rest-service
 Simple Restful webservice using Spring
+
+This service sends HTTP GET requests to localhost, with the extentions of /greeting and /secret. /greeting exposes content that says "Hello, user!" The query string has an optional name parameter, where the default is just "user." /secret has content that says "you found a secret?" It was an additional extension I added to the Spring project. It also has the same optional name parameter. The Greeting.java class creates a simple Greeting object that has a (long) ID and a (String) content. The GreetingController.java class can be identified as a controller by Spring by the @RestController annotation. The @GetMapping annotations maps the "/greeting" and "/secret" to the query string extentions. Underneath those a new greeting object is created with a counter (for the ID) and a String object formatted in a specific template for the content.
